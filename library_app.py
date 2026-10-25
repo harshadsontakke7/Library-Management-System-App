@@ -85,7 +85,11 @@ def get_engine():
     url = st.secrets["connections"]["neon"]["url"]
     if url.startswith("postgres://"):
         url = url.replace("postgres://", "postgresql://", 1)
-    return create_engine(url, pool_pre_ping=True, pool_recycle=300)
+    return create_engine(
+    url.replace("postgresql://", "postgresql+psycopg2://", 1),
+    pool_pre_ping=True,
+    pool_recycle=300
+)
 
 def db_read_records(path, expected_fields):
     try:
