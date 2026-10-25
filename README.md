@@ -89,7 +89,9 @@ Replace the placeholders with your actual configuration values. Use a Gmail App 
 ```bash
 streamlit run library_app.py
 ```
+## Live Demo
 
+**Try the application here:** [Library Management System](https://library-management-system-app-hw6tchliz8vzxjgycjdtal.streamlit.app/)
 The application will open in your browser.
 
 ## Database
